@@ -1,6 +1,12 @@
-h1 {
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+/* CSS (trouble making sass)*/
+h3 {
+  text-shadow: red .5pt .5pt;
+  text-indent: 0rem;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-indent: 3rem;
 }
 
 .wrapper {
@@ -9,13 +15,11 @@ h1 {
 }
 
 .grid-container {
- display: grid;
-  grid-template-areas: 
-    "header header header"
-    "aside-one main aside-two"
-    "footer footer footer"
-    ;
-
+display: grid;
+grid-template-areas: 
+"header header header"
+"main main main"
+"footer footer footer";
   min-height: 80vh;
   margin-top: 4rem;
   gap: 0.5rem;
@@ -23,11 +27,12 @@ h1 {
 
 .grid-item {
   font-size: 1.5rem;
-  background-color: cornflowerblue;
+  background-color: black;
+  color: white;
   padding: 1rem;
 }
 
-/* ADD STYLES TO EACH OF THE FOLLOWING SELECTORS */
+/* Advance grid format */
 
 .header {
   grid-area: header;
@@ -38,16 +43,27 @@ h1 {
     grid-area: main;
 }
 
-.aside-one {
+/* .aside-one {
     grid-area: aside-one;
-}
+} */
 
-.aside-two {
+/* .aside-two {
     grid-area: aside-two;
-}
+} */
 
 .footer {
     grid-area: footer;
 }
+/* end of advance grid format */
 
-
+button {
+  width: 12rem;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+/* pseudo element */
+button:hover{
+  color:black;
+  background-color: red
+}
